@@ -1,1 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
+  .inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: "Inter";
+    background-color: #fff;
+    color: #111;
+    line-height: 1.6;
+    padding: 2rem;
+    padding-left: 7%;
+    padding-right:7%; 
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2%;
+
+  }
+  
+  .logo {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline {
+    position: relative;
+    margin-left: 2rem;
+    border-left: 2px solid #ccc;
+    padding-left: 2rem;
+    
+  }
+  
+  .entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    position: relative;
+ 
+  }
+  
+  .entry .icon {
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -3rem;
+    top: 0.5rem;
+  }
+  
+  .entry .content-box {
+    display: flex;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: fit-content;
+  }
+  
+  .entry h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .entry .date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+  }
+
+  .entry-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding-left: 4rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid #000;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .btn:hover {
+    background: #eee;
+  }
+  
+  .main-box{
+      display: flex;
+      width: 100vw;
+      align-items: center;
+      min-height: 50vh;
+  }
+
+  .main-box-left{
+      width: 40%;
+      line-height: 1.7rem;
+  }
+
+  .main-box-left .btn{
+      margin-top: 7%;
+  }
+  .main-box-right {
+    width: 60%; 
+  }
+  
+  .main-box-right img {
+    padding: 10%;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;         
+  }
+  

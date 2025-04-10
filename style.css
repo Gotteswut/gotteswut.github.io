@@ -172,7 +172,23 @@
     text-align: center; 
   }
 
+  .kontakt_main_box{
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+  }
 
+  .kontakt_img_box{
+    width: 40%;
+  }
+
+  .kontakt_img_box img{
+    height: 100%;
+  }
+
+  .kontakt p{
+    padding-top: 0.5rem;
+  }
 
 
 
@@ -295,6 +311,16 @@
   
     .entry .icon {
       left: -2rem;
+    }
+
+    
+    .kontakt_main_box{
+      height: auto;
+      flex-direction: column-reverse;
+    }
+
+    .kontakt_img_box{
+      padding-top: 10%;
     }
     
   }

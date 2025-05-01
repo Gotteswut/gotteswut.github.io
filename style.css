@@ -203,46 +203,45 @@
     margin-right: 1.5rem;
   }
 
-  .spielelemente, .spiele, .prinzipien{
+  .textLeftImgRight, .spiele, .prinzipien, .hex-wrapper{
     display: flex; 
     margin-top: 5%;
     width: 100%;
     padding: 2rem; 
     border-radius: 25px;
-    background-color: #efefef;
+    background-color: #f5f1f1;
   }
 
   .spiele{
     flex-direction: column;
   }
 
-  .spielelemente h4, .spiele h4, .prinzipien h4{
+  .textLeftImgRight h4, .spiele h4, .prinzipien h4, .hex-wrapper h4{
     color: #555;
   }
 
-  .spielelemente p{
+  .textLeftImgRight{
     margin-top: 2%;
     margin-bottom: 2%;
   }
 
-  .spielelemente ul{
+  .textLeftImgRight ul{
     margin: 5%;
   }
 
-  .spielelemnete-img-box-left{
+  .textLeftImgRight-img{
     width: 40%;
   }
 
-  .spielelemnete-img-box-left img{
+  .textLeftImgRight-img img{
     object-fit: cover;   
     width: 100%;
   }
 
-  .spielelemnete-text{
+  .textLeftImgRight-text{
     width: 60%;
   } 
 
-  
   .flip-card-row{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -354,17 +353,55 @@
       font-size: 0.9rem;
     }
 
+    .hex-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0px;
+      padding-top: 2%;
+    }
   
+    .hex-container {
+      width: 20vw;
+      height: 35vh;
+      margin: 1vh;
+      clip-path: polygon(
+        50% 0%, 
+        93% 25%, 
+        93% 75%, 
+        50% 100%, 
+        7% 75%, 
+        7% 25%
+      );
+      background: radial-gradient(circle,  rgb(209, 209, 209), rgb(110, 110, 110) );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1rem;
+    }
+  
+    /* Optional: versetze jede zweite Zeile leicht */
+    .hex-container:nth-child(2n) {
+      transform: translateY(5vh);
+    }
+  
+    .hex-content  {
+      padding: 25%; 
+      font-size: .9rem;
+      z-index: 1;
+    }
+    .hex-wrapper{
+      flex-direction: column;
+    }
 
 
-
-
-
-
-
-
-
-
+    @media (max-width: 1200px) {
+      .hex-container {
+        width: 25vw; 
+        height: 30vh;
+      }
+    }
 
 
     @media (max-width: 1024px) {
@@ -377,6 +414,37 @@
     .flip-card-back {
       font-size: 1.3vh; 
     }
+
+    .hex-container {
+      width: 30vw; 
+      height: 30vh;
+    }
+  }
+
+  @media (max-width: 840px){
+    .hex-container {
+      width: 35vw; 
+      height: 23vh;
+    }
+    
+    .hex-container:nth-child(2n) {
+      transform: translateY(0);
+    }
+
+    
+  .textLeftImgRight, .spiele, .prinzipien{
+    flex-direction: column;
+    width: 100%;
+}
+
+.textLeftImgRight-img {
+    width: 100%;
+}
+
+.textLeftImgRight-text {
+  width: 100%;
+}
+
   }
   
 
@@ -495,16 +563,16 @@
       margin: 0.5rem; 
   }
 
-  .spielelemente, .spiele, .prinzipien{
+  .textLeftImgRight, .spiele, .prinzipien{
       flex-direction: column;
       width: 100%;
   }
 
-  .spielelemnete-img-box-left {
+  .textLeftImgRight-img {
       width: 100%;
   }
 
-  .spielelemnete-text {
+  .textLeftImgRight-text {
     width: 100%;
   }
 
@@ -562,6 +630,23 @@
     margin-top: 1.5rem;
   }
 
-    
+  .hex-container {
+    width: 40vw; 
+    height: 30vh;
+  }
+  
+  .hex-container:nth-child(2n) {
+    transform: translateY(0);
+  }
 }
 
+@media (max-width: 480px) {
+  .hex-container {
+    width: 90vw; 
+    height: 30vh;
+  }
+
+  .hex-container:nth-child(2n) {
+    transform: translateY(0);
+  }
+}

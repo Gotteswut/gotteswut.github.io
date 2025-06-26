@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gotteswut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body>
+ <header>
+  <div class="logo">
+    <a href="/index.html">
+      <img src="/img/Logo/Gotteswut-eyes-black.png" alt="Logo" class="logo-img">
+      <strong>Gotteswut</strong>
+    </a>
+    <div class="hamburger" id="hamburger">☰</div>
+  </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/dokumentation.html">Dokumentation</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+        <a class="btn" href="../dokumentation.html"><strong>&#10006;</strong></a>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+       
+    <div class="nav-dokumentation">
+        <div> <h1>Schnittstelle</h1> </div>
+        <div>
+            <ul>
+                <a class="btn" href="#recherche">Recherche</a>
+                <a class="btn" href="#cv_idee">Finale Idee</a>
+            </ul>
+        </div>
+    </div>
+ 
+   <div class="prinzipien"  id="recherche">
+        <div>
+            <h2>Schnittstellen - Recherche</h2>
+            <h4>Welche Technologien gibt es? Wie können wir ein immersives Erlebnis erstellen? </h4>
+            <br>
+            <p>Im Rahmen unserer technischen Recherche haben wir verschiedene Ansätze untersucht, um eine immersive Schnittstelle zwischen analogen Spielfeldern und digitalen Reaktionen zu schaffen. Dabei wurde deutlich, dass viele bestehende Technologien entweder zu groß, zu teuer oder technisch zu unflexibel sind, um unser Konzept sinnvoll umzusetzen.</p>
+        </div>
+        <div class="listen-container">
+            <ul class="liste">
+                <li><strong>NFC (z. B. RC522, PN532)</strong><br>
+                  Idee: Jede Figur enthält einen NFC-Tag, Felder erkennen diesen.<br>
+                  Problem: Jedes Feld bräuchte mehrere Reader oder jede Figur einen – beides zu teuer und technisch bei dem vorhandenen Platz nicht möglich. Keine Mehrfacherkennung möglich. 
+                </li>
+                  <li><strong> Infrarot (IR-Kommunikation)</strong> <br>
+                   Idee: Sender/Empfänger in Feldern und Figuren erkennen sich gegenseitig.<br>
+                  Problem: Sehr viele Komponenten nötig, möglicher weiße fehleranfällig bei Lichtverhältnissen, hohe Komplexität. 
+                  </li>
+                  <li><strong>Drucksensoren</strong> <br>
+                    Idee: Gewicht der Figuren löst Erkennung auf dem Feld aus. <br>
+                    Problem: Figuren oft ähnlich schwer → keine sichere Unterscheidung. Jeder Sensor muss einzeln kalibriert werden.</li>
+                  <li><strong>Stromkreis-Kontakt (kontaktbasiert)</strong> <br>
+                    Idee: Figur schließt beim Aufstellen auf dem Feld einen Stromkreis.<br>
+                    Vorteile: Einfach, günstig und zuverlässig. Erkennung von Figurtypen nur mit Zusatztechnik möglich.
+                    Problem: Nicht genügend Kompetenz im Team, im Bezug auf Elektronik
+                  </li>   
+            </ul>
+            <ul class="liste">
+              <img style="width: 100%;" src="/img/Technologien.png" alt="Bild">
+            </ul>
+
+          </div>
+    </div>
+
+    <div class="contentbox">
+       <h2>Unsere Schnittstelle</h2>
+            <h4>Digitale Erweiterung durch Bilderkennung und Spielengine</h4>
+            <br>
+      <div class="textSidebySide">
+        <p> Um das Spielerlebnis auf einem analogen Spielbrett durch digitale Elemente zu erweitern, haben wir uns für einen innovativen Ansatz entschieden: Die Position der Spielfiguren wird mithilfe einer CV-Anwendung (Computer Vision) erfasst und in Echtzeit ausgewertet. Durch fixierte Kameras an dem Spielfeld wird das gesamte Brett kontinuierlich beobachtet. Ein Bilderkennungsalgorithmus identifiziert die einzelnen Figuren anhand visueller Merkmale und berechnet ihre exakten Positionen auf dem Spielfeld. Diese Informationen werden anschließend automatisch an eine Spielengine weitergeleitet, die passende Animationen und visuelle Effekte erzeugt.</p>
+        <p>Als Engine verwenden wir Godot, da sie Open Source ist und sich durch eine aktive Community und flexible Einsatzmöglichkeiten auszeichnet. Zudem wurde Godot im 5. Semester von Teilen unseres Teams bereits im Rahmen eines Moduls eingesetzt – was eine effiziente Weiterentwicklung des Projekts ermöglicht. So entsteht eine hybride Spielerfahrung, die das haptische Gefühl eines echten Brettspiels mit den visuellen Möglichkeiten digitaler Technologien verbindet.</p>
+      </div>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

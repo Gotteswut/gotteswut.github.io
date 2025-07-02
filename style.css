@@ -503,8 +503,8 @@
 }
 .team-photo {
   width: 80%;
-  max-height: 600px;
-  object-fit: cover;
+  max-height: 600px; 
+  object-fit: none;
   border-radius: 10px;
   margin-bottom: 2rem;
 }

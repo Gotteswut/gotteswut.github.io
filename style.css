@@ -209,7 +209,7 @@
     margin-right: 1.5rem;
   }
 
-  .textLeftImgRight, .spiele, .prinzipien, .hex-wrapper, .fullWidthImg, .textImgSlider, .contentbox{
+  .textLeftImgRight, .spiele, .prinzipien, .hex-wrapper, .fullWidthImg, .textImgSlider, .contentbox, .generalBox{
     display: flex; 
     margin-top: 5%;
     width: 100%;
@@ -232,6 +232,9 @@
   }
 
   .textLeftImgRight-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40%;
   }
 
@@ -287,6 +290,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .flip-card-front-img{
@@ -359,40 +363,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0px;
-      padding-top: 2%;
+      gap: 2vw;
+      padding-top: 5vh;
+    }
+    
+    .hex-container img{
+      width: 25vw;
     }
   
-    .hex-container {
-      width: 20vw;
-      height: 35vh;
-      margin: 1vh;
-      clip-path: polygon(
-        50% 0%, 
-        93% 25%, 
-        93% 75%, 
-        50% 100%, 
-        7% 75%, 
-        7% 25%
-      );
-      background: radial-gradient(circle,  rgb(209, 209, 209), rgb(110, 110, 110) );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 1rem;
-    }
-  
-    /* Optional: versetze jede zweite Zeile leicht */
-    .hex-container:nth-child(2n) {
-      transform: translateY(5vh);
-    }
-  
-    .hex-content  {
-      padding: 25%; 
-      font-size: .9rem;
-      z-index: 1;
-    }
     .hex-wrapper{
       flex-direction: column;
     }
@@ -494,6 +472,7 @@
   padding: 2rem; 
   display: flex;
   flex-direction: column;
+
 }
 .team-header{
   display: flex;
@@ -501,18 +480,24 @@
   justify-content: center;
   align-items: center;
 }
-.team-photo {
-  width: 80%;
-  max-height: 600px; 
-  object-fit: none;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+.team-img{
+  height: 45vh; 
+  width: 50vw; 
+  background-image: url('img/team.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
 }
 .team-members {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: repeat(2, auto);   
   gap: 1.5rem; 
+  margin-top: 5vh; 
+
+  width: max-content;  
+  margin-left: auto;
+  margin-right: auto;
 }
 .member {
   width: 20vw;
@@ -525,15 +510,31 @@
   border-radius: 50%;
 }
 
+.main-team{
+  display: flex;
+  justify-content: center;
+}
 
+.smallerFlow{
+  width: 30vh;
+}
 
+.textFullwidht{
+ width: 100%;
+}
 
+.generalBox{
+  flex-direction: column;
+}
 
+.imgSidebySide{
+  display: flex; 
+  margin-top: 5vh;
+}
 
-
-
-
-
+.imgSidebySide img {
+  max-width: 45%;
+}
 
 
 
@@ -555,10 +556,7 @@
 
 
     @media (max-width: 1200px) {
-      .hex-container {
-        width: 25vw; 
-        height: 30vh;
-      }
+    
       .slideshow-container {
         max-width: 70%;
       }
@@ -570,7 +568,12 @@
       .team-members {
         grid-template-columns: repeat(2, 1fr);
       }
-        }
+
+    }
+
+
+
+
 
 
     @media (max-width: 1024px) {
@@ -583,11 +586,13 @@
     .flip-card-back {
       font-size: 1.3vh; 
     }
+    
+    .flip-card-front-img img{
+    max-width: 30vh;
+    border-radius: 8px;
+    justify-self: center; 
+  }
 
-    .hex-container {
-      width: 30vw; 
-      height: 30vh;
-    }
     .textSidebySide {
     flex-direction: column;
     gap: 2rem;
@@ -609,20 +614,20 @@
 
   .member {
     width: 35vw;
+  }  
+
+  .hex-container img{
+      width: 30vw;
+    }
   }
-  }
+
+
+
+
+
 
   @media (max-width: 840px){
-    .hex-container {
-      width: 35vw; 
-      height: 23vh;
-    }
-    
-    .hex-container:nth-child(2n) {
-      transform: translateY(0);
-    }
-
-    
+  
   .textLeftImgRight, .spiele, .prinzipien{
     flex-direction: column;
     width: 100%;
@@ -656,6 +661,10 @@
     font-size: 16px;
     padding: 12px;
   }
+
+  .hex-container img{
+      width: 35vw;
+    }
 }
   
 
@@ -684,8 +693,6 @@
       gap: 1rem;
       background-color: #fff;
       position: absolute;
-      top: 80px;
-      right: 0;
       padding: 1rem;
       border: 1px solid #000;
       border-radius: 1rem;
@@ -694,12 +701,15 @@
   
     nav.open {
       display: flex;
+      transform: translate(40vw, 1rem); /* X (rechts), Y (unten) */
+
     }
   
     .hamburger {
       display: block;
       cursor: pointer;
       font-size: 2rem;
+      margin-left: 1rem;
     }
   
     nav ul {
@@ -806,7 +816,7 @@
 }
 
   .flip-card-front-img img{
-    max-width: 80%;
+    max-width: 20vh;
     border-radius: 8px;
     justify-self: center; 
   }
@@ -841,15 +851,6 @@
     margin-top: 1.5rem;
   }
 
-  .hex-container {
-    width: 40vw; 
-    height: 30vh;
-  }
-  
-  .hex-container:nth-child(2n) {
-    transform: translateY(0);
-  }
-
    .team-members {
     grid-template-columns: 1fr;
   }
@@ -867,17 +868,23 @@
   .team-photo {
     max-height: 400px;
   }
+
+  .hex-container img{
+      width: 37vw;
+    }
+
+    .imgSidebySide{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgSidebySide img {
+  max-width: 100%;
+}
 }
 
 @media (max-width: 480px) {
-  .hex-container {
-    width: 90vw; 
-    height: 30vh;
-  }
-
-  .hex-container:nth-child(2n) {
-    transform: translateY(0);
-  }
 
   .slideshow-container {
     max-width: 100%;
@@ -915,5 +922,9 @@
   #team {
     padding: 1rem;
   }
+
+  .hex-container img{
+      width: 70vw;
+    }
 
 }

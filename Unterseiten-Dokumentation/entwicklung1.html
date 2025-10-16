@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gotteswut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body>
+ <header>
+  <div class="logo">
+    <a href="/index.html">
+      <img src="/img/Logo/Gotteswut-eyes-black.png" alt="Logo" class="logo-img">
+      <strong>Gotteswut</strong>
+    </a>
+    <div class="hamburger" id="hamburger">☰</div>
+  </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/dokumentation.html">Dokumentation</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+          <a class="btn" href="../dokumentation.html"><strong>&#10006;</strong></a>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+       
+    <div class="nav-dokumentation">
+        <div> <h1>Erste Schritte der Entwicklung </h1> </div>
+        <div>
+            <ul>
+                <a class="btn" href="#controller">Controller</a>
+                <a class="btn" href="#camera">Kamera</a>
+            </ul>
+        </div>
+    </div>
+
+<div class="textImgSlider" id="controller">
+    <div>
+        <h2>Eigener Controller</h2>
+        <h4>Die Entwicklung unseres Controllers</h4>
+        <br>
+        <div class="textSidebySide">
+            <p>Der Controller wurde mit dem Ziel entwickelt, ein einfaches und intuitives Gerät zu schaffen, das nur die wichtigsten Funktionen für die Menü-Navigation im digitalen Spiel enthält. Als Inspiration dienten uns Multimedia-Systeme aus Autos: Drehen nach links oder rechts bewegt das Menü, Drücken wählt aus. Für den Bau benötigten wir verschiedene Bauteile wie einen Encoder und einen Mikrocontroller, der die Signale per Bluetooth senden kann. Nach anfänglichen Schwierigkeiten bei der Bauteilesuche und einem beschädigten Mikrocontroller beim Löten funktionierte der Aufbau schließlich reibungslos.</p>
+            <p>Anschließend druckten wir das Gehäuse in 3D und verklebten alle Komponenten zum fertigen Controller. Danach stand die Software im Fokus. Anfangs traten Probleme mit den Tastencodes auf, doch mit Hilfe der Arduino-Community konnten wir alle Schwierigkeiten lösen und den Controller erfolgreich in Betrieb nehmen.</p>
+        </div>
+        
+        <div class="slideshow-container" data-slider-id="1">
+            <div class="mySlides fade"><div><img src="/img/roller_start.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/roller_mid.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/roller_fin.jpeg"></div></div>
+
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+
+        <div class="dots" data-slider-id="1" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 1)"></span>
+            <span class="dot" onclick="currentSlide(2, 1)"></span>
+            <span class="dot" onclick="currentSlide(3, 1)"></span>
+        </div>
+    </div>
+</div>
+
+<div class="textImgSlider" id="3d-druck">
+    <div>
+        <h2>Kamera-Setup</h2>
+        <h4>Erste Tests mit der Kamera</h4>
+        <br>
+        <div class="textSidebySide">
+            <p>Nachdem wir die Bestellung für den Raspberry Pi und das Kamera-Setup erhalten hatten, konnten wir erste Experimente zur Höhe, zum Winkel und zur Positionierung der Kamera durchführen, um zu klären, ob sie überhaupt alles erfassen würde. Bevor jedoch ein finaler Test möglich war, musste der Raspberry Pi zunächst zusammengebaut und ein Betriebssystem installiert werden.</p>
+            <p>Als alles funktionierte, begannen wir mit ersten Tests. Zunächst nutzten wir Konservendosen und eine einfache Pappprovisorium als Stativ, um die Kameraposition zu prüfen. Später verbesserten wir das Setup mit einer stabileren Pappkonstruktion, um genauere Ergebnisse zu erzielen und die Kamera für die spätere Nutzung optimal auszurichten.</p>
+        </div>
+        
+        <div class="slideshow-container" data-slider-id="2">
+            <div class="mySlides fade"><div><img src="/img/Kamerasetup1/overview_setup1.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Kamerasetup1/closeup_setup1.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Kamerasetup1/overview_setup2.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Kamerasetup1/pov.jpeg"></div></div>
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+        </div>
+
+        <div class="dots" data-slider-id="1" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 2)"></span>
+            <span class="dot" onclick="currentSlide(2, 2)"></span>
+            <span class="dot" onclick="currentSlide(3, 2)"></span>
+            <span class="dot" onclick="currentSlide(4, 2)"></span>
+        </div>
+    </div>
+</div>
+
+
+    
+  </div>
+
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

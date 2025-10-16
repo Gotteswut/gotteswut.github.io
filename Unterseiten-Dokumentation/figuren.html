@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gotteswut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+
+</head>
+<body>
+ <header>
+  <div class="logo">
+    <a href="/index.html">
+      <img src="/img/Logo/Gotteswut-eyes-black.png" alt="Logo" class="logo-img">
+      <strong>Gotteswut</strong>
+    </a>
+    <div class="hamburger" id="hamburger">☰</div>
+  </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/dokumentation.html">Dokumentation</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+          <a class="btn" href="../dokumentation.html"><strong>&#10006;</strong></a>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+       
+    <div class="nav-dokumentation">
+        <div> <h1>Götter und Halbgötter</h1> </div>
+        <div>
+            <ul>
+                <a class="btn" href="#3d-modelling">3D-Modelle</a>
+                <a class="btn" href="#3d-druck">3D-Druck</a>
+            </ul>
+        </div>
+    </div>
+
+<div class="textImgSlider" id="3d-modelling">
+    <div>
+        <h2>3D Modelle der Figuren</h2>
+        <h4>Die Entwicklung der Figuren in Blender</h4>
+        <br>
+        <div class="textSidebySide">
+            <p>Unser ursprünglicher Plan war es, die 3D-Modelle der Spielfiguren mithilfe von Meshy, einer KI-basierten Plattform zur automatischen Generierung von 3D-Modellen, zu erstellen. Wir testeten die Anwendung zunächst mit verschiedenen Figurenentwürfen, mussten jedoch schnell feststellen, dass die Ergebnisse nicht unseren Vorstellungen entsprachen. Über das Education-Programm konnten wir schließlich einen Pro-Account erhalten, der es uns ermöglichte, mehrere Ansichten einer Figur hochzuladen, um daraus ein detaillierteres Mesh generieren zu lassen. Trotz dieser verbesserten Möglichkeiten blieb die Qualität der automatisch erzeugten Modelle hinter unseren Erwartungen zurück.</p>
+            <p>Schließlich entschieden wir uns, die Modelle eigenständig in Blender zu erstellen – eine große Herausforderung, da niemand im Team zuvor Erfahrung im 3D-Modellieren hatte. Mit viel Geduld, zahllosen YouTube-Tutorials und einigen Fehlschlägen gelang es uns jedoch, eigene Figuren zu modellieren, die sich anschließend für den 3D-Druck eigneten. So entstanden schließlich unsere ersten physischen Spielfiguren, die später als Grundlage für das Kamera-Tracking im Spiel dienen.</p>
+        </div>
+        
+        <div class="slideshow-container" data-slider-id="1">
+            <div class="mySlides fade"><div><img src="/img/Figuren/4ueberschwemmung-character-03.png"></div></div>
+            <div class="mySlides fade"><div><video muted autoplay loop src="/img/Figuren/0001-0120.mkv"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/winter-character-03.png"></div></div>
+            <div class="mySlides fade"><div><video muted autoplay loop src="/img/Figuren/0001-0121.mkv"></div></div>
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+
+        <div class="dots" data-slider-id="1" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 1)"></span>
+            <span class="dot" onclick="currentSlide(2, 1)"></span>
+            <span class="dot" onclick="currentSlide(3, 1)"></span>
+            <span class="dot" onclick="currentSlide(4, 1)"></span>
+        </div>
+    </div>
+</div>
+
+<div class="textImgSlider" id="3d-druck">
+    <div>
+        <h2>Gedruckte Figuren</h2>
+        <h4>Die Ergebnisse aus dem 3D Drucker</h4>
+        <br>
+        <div class="textSidebySide">
+            <p>ChatGPT:
+
+Nach dem erfolgreichen Modellieren der Figuren in Blender gingen wir in die Zentralwerkstatt der Hochschule, um die Modelle dort mit dem vorhandenen 3D-Drucker herzustellen. Uns war von Beginn an bewusst, dass dieser Drucker nicht die ideale Wahl für unsere Anforderungen sein würde, da unsere Figuren mit etwa 6 cm Höhe sehr klein sind und einen vergleichsweise hohen Detailgrad aufweisen.</p>
+            <p>Wie erwartet, spiegelten sich diese Herausforderungen im Ergebnis wider: Die Ausdrucke waren zwar grundsätzlich erkennbar, doch feine Strukturen – insbesondere an Händen und Füßen – wurden nur unzureichend wiedergegeben. Trotz mehrerer Testdrucke blieben die Details weicher und weniger präzise, als wir es uns erhofft hatten. </p>
+            <p>Derzeit sind wir daher auf der Suche nach einem geeigneteren 3D-Drucker oder einem externen Dienst, der eine höhere Auflösung und damit ein saubereres, detailreicheres Ergebnis liefern kann.</p>
+        </div>
+        
+        <div class="slideshow-container" data-slider-id="2">
+            <div class="mySlides fade"><div><img src="/img/Figuren/both.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/Sumpf_front (2).jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/Sumpf_side.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/Sumpf_side_2.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/Winter_front.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/Winder_side.jpeg"></div></div>
+            <div class="mySlides fade"><div><img src="/img/Figuren/Winter_back.jpeg"></div></div>
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+        </div>
+
+        <div class="dots" data-slider-id="1" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1, 2)"></span>
+            <span class="dot" onclick="currentSlide(2, 2)"></span>
+            <span class="dot" onclick="currentSlide(3, 2)"></span>
+            <span class="dot" onclick="currentSlide(4, 2)"></span>
+            <span class="dot" onclick="currentSlide(5, 2)"></span>
+            <span class="dot" onclick="currentSlide(6, 2)"></span>
+            <span class="dot" onclick="currentSlide(7, 2)"></span>
+        </div>
+    </div>
+</div>
+
+
+    
+  </div>
+
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

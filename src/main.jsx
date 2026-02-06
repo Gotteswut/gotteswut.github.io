@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./pages/Landing.jsx";
 import DocumentationPage from "./pages/Documentation.jsx";
 import TeamPage from "./pages/Team.jsx";
@@ -12,7 +12,7 @@ import ErrorPage from "./pages/Error.jsx";
 import Documentation_Content from "./pages/Documentation_Content.jsx";
 
 // Router erstellen
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
